@@ -11,6 +11,16 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(home: ProfileScreen());
+    return MaterialApp(
+        theme: ThemeData(
+          textTheme: TextTheme(
+            headline1: TextStyle(
+              fontSize: 22,
+              fontWeight: FontWeight.bold,
+              color: Colors.white,
+            ),
+          ),
+        ),
+        home: ProfileScreen());
   }
 }
