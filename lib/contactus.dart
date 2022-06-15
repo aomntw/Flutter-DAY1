@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:helloworld/Profile.dart';
 
 class ContactUsScreen extends StatefulWidget {
   const ContactUsScreen({Key? key}) : super(key: key);
@@ -13,11 +14,11 @@ class _ContactUsScreenState extends State<ContactUsScreen> {
   String email = "";
   @override
   Widget build(BuildContext context) {
-    String text = ModalRoute.of(context)!.settings.arguments as String;
+    Profile profile = ModalRoute.of(context)!.settings.arguments as Profile;
 
     return Scaffold(
       appBar: AppBar(
-        title: Text(text),
+        title: Text(profile.name),
       ),
       body: Container(
         margin: EdgeInsets.all(8),

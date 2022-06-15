@@ -48,7 +48,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
             ElevatedButton(
               onPressed: () {
                 Navigator.pushNamed(context, '/contactus',
-                    arguments: "Hello World");
+                    arguments: Profile(name: "nuntawat", email: "test"));
               },
               child: Text("Contact"),
             )
@@ -57,4 +57,10 @@ class _ProfileScreenState extends State<ProfileScreen> {
       ),
     );
   }
+}
+
+class Profile {
+  String name;
+  String email;
+  Profile({required this.name, required this.email});
 }
