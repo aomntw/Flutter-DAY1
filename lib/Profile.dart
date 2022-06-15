@@ -45,6 +45,13 @@ class _ProfileScreenState extends State<ProfileScreen> {
                 title: Text("nuntawat@gmail.com"),
               ),
             ),
+            ElevatedButton(
+              onPressed: () {
+                Navigator.pushNamed(context, '/contactus',
+                    arguments: "Hello World");
+              },
+              child: Text("Contact"),
+            )
           ],
         ),
       ),
